@@ -42,7 +42,7 @@ pub use address::addr::*;
     derive(rkyv::Archive, rkyv::Deserialize, rkyv::Serialize)
 )]
 #[cfg_attr(feature = "bytecheck", archive_attr(derive(rkyv::CheckBytes)))]
-pub struct IpLookupTable<A, T: Clone + Copy + Default> {
+pub struct IpLookupTable<A, T> {
     inner: TreeBitmap<T>,
     _addrtype: PhantomData<A>,
 }
