@@ -741,9 +741,4 @@ mod tests {
         assert_eq!(iter.next().unwrap().2, 4);
         assert_eq!(iter.next(), None);
     }
-
-    #[derive(Clone, Copy, Default, Debug)]
-    struct Thing {
-        _id: usize,
-    }
 }
